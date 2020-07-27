@@ -84,7 +84,7 @@ def star_haze(disc_radius_scaled, density):
     disc_radius_scaled = galactic disc radius scaled to radio bubble diameter
     density = multiplier to vary number of stars posted
     """
-    for i in range(0, disc_radius_scaled * density):
+    for i in range(0, int(disc_radius_scaled) * density):
         x, y = random_polar_coordinates(disc_radius_scaled)
         c.create_text(x, y, fill='white', font=('Helvetica', '7'), text='.')
 
